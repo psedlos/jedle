@@ -35,3 +35,4 @@ public class ClientSend{
         }
     }
 }
+// it is made that port is listing for messages came from port 6667
