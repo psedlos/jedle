@@ -11,12 +11,9 @@ import java.net.InetSocketAddress;
 
 public class ClientListen implements Runnable {
     //MainContainer mc;
+    Warsztat warsztat;
+    public ClientListen(Warsztat warsztat){this.warsztat = warsztat;}//MainContainer mc){        this.mc = mc;    }
 
-    public ClientListen(){}//MainContainer mc){        this.mc = mc;    }
-
-    int trailerNo;
-    int stat_int;
-    int addr_int;
 
     @Override
     public void run() {
@@ -30,7 +27,7 @@ public class ClientListen implements Runnable {
                     Log.d("UDP Bound:", "address reused");
                 }
                 udpSocket.setReuseAddress(true);
-                InetSocketAddress port = new InetSocketAddress(64442);
+                InetSocketAddress port = new InetSocketAddress(6666);
                 udpSocket.bind(port);
                 byte[] message = new byte[8000];
                 DatagramPacket packet = new DatagramPacket(message, message.length);
@@ -42,9 +39,7 @@ public class ClientListen implements Runnable {
                 }
                 String text = new String(intmessage, 0, packet.getLength());
                 Log.d("Received Data", text);
-
-
-                //mc.distribuate_data(intmessage);
+                warsztat.getMessage(text);
 
 
             } catch (IOException e) {

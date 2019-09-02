@@ -6,6 +6,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class BaseActivity extends AppCompatActivity {
+    static public Warsztat warsztat = new Warsztat();
     //static public MainContainer mc;// = new MainContainer();
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -13,7 +14,8 @@ public class BaseActivity extends AppCompatActivity {
         //if(this.mc == null)
         //{mc = new MainContainer();}
         //getMenuInflater().inflate(R.menu.menu_main, menu);
-        Runnable clientListen = new ClientListen();//mc);
+        //warsztat = new Warsztat();
+        Runnable clientListen = new ClientListen(warsztat);//mc);
         Thread UDPList = new Thread( clientListen );
         UDPList.start();
         return true;
