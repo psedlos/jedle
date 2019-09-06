@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.TextView;
 
@@ -16,14 +17,12 @@ public class Warsztat extends BaseActivity {
     public Button refreshbutton;
     public ClientSend clientSend;
     public String recieverName;
-    public TextView ipaddr;
+    public EditText ipaddr;
+    public TextView[] switchesNames;
     public Runnable clientListen;
-    public Thread UDPList;
     public Warsztat(){
-        clientSend = new ClientSend();
-        clientListen = new ClientListen(this);
-        UDPList = new Thread( clientListen );
-        UDPList.start();
+        this.clientListen = BaseActivity.clientListen;
+        this.clientSend = BaseActivity.clientSend;
     }
     int i;
     int relayVal;
@@ -31,7 +30,16 @@ public class Warsztat extends BaseActivity {
 
     public void WarsztatMainActivity(){
 
+
         recieverName = "Warsztat";
+        switchesNames[0].setText(R.string.textView1);
+        switchesNames[1].setText(R.string.textView2);
+        switchesNames[2].setText(R.string.textView3);
+        switchesNames[3].setText(R.string.textView4);
+        switchesNames[4].setText(R.string.textView5);
+        switchesNames[5].setText(R.string.textView6);
+        switchesNames[6].setText(R.string.textView7);
+        switchesNames[7].setText(R.string.textView8);
 
         switches[0].setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -82,19 +90,6 @@ public class Warsztat extends BaseActivity {
             Log.e("CListen", e.getMessage());
         }
         clientSend.sendText(recieverName + " st", ipaddress);
-    }
-    public void updateSwitches(int valueOfSwitches){
-            new Handler(Looper.getMainLooper()).post(new Runnable() {
-                @Override
-                public void run() {
-                    int valueOfSwitches = warsztat.valueOfSwitches;
-                    for(i = 0; i<8 ;  i++) {
-                        relayVal = valueOfSwitches % 2;
-                        switches[i].setChecked((relayVal > 0));
-                        valueOfSwitches = valueOfSwitches / 2;
-                    }
-                }
-            });
     }
     public void updateSwitches(final String[] commandBits){
         new Handler(Looper.getMainLooper()).post(new Runnable() {

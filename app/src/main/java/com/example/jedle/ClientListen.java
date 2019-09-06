@@ -12,12 +12,13 @@ import java.net.InetSocketAddress;
 public class ClientListen implements Runnable {
     //MainContainer mc;
     Warsztat warsztat;
-    public ClientListen(Warsztat warsztat){this.warsztat = warsztat;}//MainContainer mc){        this.mc = mc;    }
+    public ClientListen(){}//MainContainer mc){        this.mc = mc;    }
 
 
     @Override
     public void run() {
         Looper.prepare();
+        this.warsztat = MainActivity.warsztat;
         boolean run = true;
         while (run) {
             try {

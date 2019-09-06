@@ -1,4 +1,13 @@
 <resources>
     <string name="app_name">Jedle</string>
     <string name="title_activity_main">MainActivity</string>
+    <string name="textView1">Pierwszy</string>
+    <string name="textView2">Drugi</string>
+    <string name="textView3">Trzeci</string>
+    <string name="textView4">Czwart</string>
+    <string name="textView5">Piaty</string>
+    <string name="textView6">Szosty</string>
+    <string name="textView7">Siodmy</string>
+    <string name="textView8">Osmy</string>
+
 </resources>
