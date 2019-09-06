@@ -10,14 +10,10 @@ import android.view.MenuItem;
 public class BaseActivity extends AppCompatActivity {
     static public ClientSend clientSend = new ClientSend();
     static public ClientListen clientListen = new ClientListen();
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.inflateMenu(R.menu.menu_main);
-        setSupportActionBar(toolbar);
-
-    }
+    //@Override
+    //protected void onCreate(Bundle savedInstanceState) {
+    //    super.onCreate(savedInstanceState);
+    //}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

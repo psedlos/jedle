@@ -16,7 +16,7 @@ import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.VideoView;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
     ClientSend clientSend;
     ClientListen clientListen;
     static public Warsztat warsztat = new Warsztat();
@@ -27,9 +27,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Toolbar toolbar = findViewById(R.id.toolbar);
-        //toolbar.inflateMenu(R.menu.menu_main);
-        //setSupportActionBar(toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.inflateMenu(R.menu.menu_main);
+        setSupportActionBar(toolbar);
 
         this.clientSend = BaseActivity.clientSend;
         this.clientListen = BaseActivity.clientListen;
