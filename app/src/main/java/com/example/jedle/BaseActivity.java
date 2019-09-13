@@ -10,6 +10,9 @@ import android.view.MenuItem;
 public class BaseActivity extends AppCompatActivity {
     static public ClientSend clientSend = new ClientSend();
     static public ClientListen clientListen = new ClientListen();
+    static public Thread UDPList;
+    static public TcpClient mTcpClient;// = new TcpClient();
+
     //@Override
     //protected void onCreate(Bundle savedInstanceState) {
     //    super.onCreate(savedInstanceState);
@@ -19,6 +22,13 @@ public class BaseActivity extends AppCompatActivity {
     public boolean onCreateOptionsMenu(Menu menu) {
         super.onCreateOptionsMenu(menu);
         getMenuInflater().inflate(R.menu.menu_main,menu);
+        UDPList = new Thread(clientListen);
+        UDPList.start();
+        new ConnectTask().execute("");
+
+        menu.getItem(0).setTitle(MainActivity.warsztat.recieverName);
+        menu.getItem(1).setTitle("two");
+        menu.getItem(2).setTitle("tre");
         return super.onCreateOptionsMenu(menu);
     }
 
