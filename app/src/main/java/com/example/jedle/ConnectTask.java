@@ -3,7 +3,8 @@ import android.os.AsyncTask;
 import android.util.Log;
 
 public class ConnectTask extends AsyncTask<String, String, TcpClient> {
-    TcpClient mTcpClient = BaseActivity.mTcpClient;
+    public static TcpClient mTcpClient;// = BaseActivity.mTcpClient;
+    Warsztat warsztat = MainActivity.warsztat;
 
     @Override
     protected TcpClient doInBackground(String... message) {
@@ -17,7 +18,11 @@ public class ConnectTask extends AsyncTask<String, String, TcpClient> {
                 publishProgress(message);
             }
         });
+        Warsztat.mTcpClient = this.mTcpClient;
+        MainActivity.mTcpClient = mTcpClient;
         mTcpClient.run();
+        //MainActivity.mTcpClient = this.mTcpClient;
+        //BaseActivity.mTcpClient = this.mTcpClient;
 
         return null;
     }
@@ -27,6 +32,7 @@ public class ConnectTask extends AsyncTask<String, String, TcpClient> {
         super.onProgressUpdate(values);
         //response received from server
         Log.d("test", "response " + values[0]);
+        warsztat.getMessage(values[0]);
         //process server response here....
 
     }

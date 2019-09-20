@@ -19,9 +19,9 @@ import android.widget.TextView;
 import android.widget.VideoView;
 
 public class MainActivity extends BaseActivity {
-    ClientSend clientSend;
-    ClientListen clientListen;
-    TcpClient mTcpClient;
+    //ClientSend clientSend;
+    //ClientListen clientListen;
+    static TcpClient mTcpClient;
     static public Warsztat warsztat = new Warsztat();
 
     @Override
@@ -33,9 +33,11 @@ public class MainActivity extends BaseActivity {
         setSupportActionBar(toolbar);
 
 
-        this.clientSend = BaseActivity.clientSend;
-        this.clientListen = BaseActivity.clientListen;
-        this.mTcpClient = BaseActivity.mTcpClient;
+        //this.clientSend = BaseActivity.clientSend;
+        //this.clientListen = BaseActivity.clientListen;
+        new ConnectTask().execute("");
+        this.mTcpClient = ConnectTask.mTcpClient;
+        //this.mTcpClient = ConnectTask.mTcpClient;
 
         warsztat.refreshbutton = findViewById(R.id.refreshButton);
         warsztat.ipaddr = findViewById(R.id.editText);
@@ -44,11 +46,9 @@ public class MainActivity extends BaseActivity {
         warsztat.switchesNames = new TextView[]{findViewById(R.id.textView1),findViewById(R.id.textView2),findViewById(R.id.textView3),findViewById(R.id.textView4),findViewById(R.id.textView5),findViewById(R.id.textView6),findViewById(R.id.textView7),findViewById(R.id.textView8)};
         warsztat.WarsztatMainActivity();
 
-        clientSend.sendText(warsztat.recieverName + " st",warsztat.ipaddr.getText().toString());
+        //clientSend.sendText(warsztat.recieverName + " st",warsztat.ipaddr.getText().toString());
 
-        if (mTcpClient != null) {
-            mTcpClient.sendMessage("testing");
-        }
+
 
         VideoView videoView = findViewById(R.id.videoView);
         //videoView.setVideoURI(dd);

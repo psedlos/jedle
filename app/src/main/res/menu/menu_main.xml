@@ -3,21 +3,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.mytestapp.MainActivity">
     <item
-        android:id="@+id/node0"
+        android:id="@+id/connect"
         android:orderInCategory="100"
-        android:title="ACTION SETTINGs"
+        android:title="connect"
         app:showAsAction="never" />
     <item
-        android:id="@+id/connect_bluetooh"
+        android:id="@+id/dis_connect"
         android:orderInCategory="101"
-        android:title="Connect"
+        android:title="disconnect"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/show_main"
+   <item
+        android:id="@+id/reconnect"
         android:orderInCategory="102"
-        android:title="Show Panas"
+        android:title="reconnect"
         app:showAsAction="never" />
-    <item
+    <!-- <item
         android:id="@+id/show_radio"
         android:orderInCategory="103"
         android:title="Radio interface"
@@ -26,6 +26,6 @@
         android:id="@+id/show_driver"
         android:orderInCategory="104"
         android:title="Driver interface"
-        app:showAsAction="never" />
+        app:showAsAction="never" />-->
 
 </menu>
