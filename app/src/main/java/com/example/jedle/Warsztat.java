@@ -90,14 +90,14 @@ public class Warsztat extends BaseActivity {
         if (isChecked) txt = txt + " 1";
         else txt = txt + " 0";
         mTcpClient.sendMessage(txt);
-        final Handler handler = new Handler();
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                Log.d("WAIT","if you read that I perhaps has waited for 100ms");
-            }
-        },100);
-        mTcpClient.sendMessage(recieverName + " st");
+        //final Handler handler = new Handler();
+        //handler.postDelayed(new Runnable() {
+        //    @Override
+        //    public void run() {
+        //        Log.d("WAIT","if you read that I perhaps has waited for 100ms");
+        //    }
+        //},100);
+        //mTcpClient.sendMessage(recieverName + " st");
     }
     public void updateSwitches(final String[] commandBits){
         new Handler(Looper.getMainLooper()).post(new Runnable() {

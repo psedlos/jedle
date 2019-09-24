@@ -12,6 +12,7 @@ public class TcpClient {
     public static final int SERVERPORT = 9999;
     private OnMessageReceived mMessageListener = null;
     private boolean mRun = false;
+    public static String lastMessage;
 
     PrintWriter out;
     BufferedReader in;
@@ -35,6 +36,22 @@ public class TcpClient {
                     out.println(message);
                     out.flush();
                     Log.d("sendM:",message);
+                    lastMessage = message;
+                }
+
+            }
+        };
+        Thread thread = new Thread(runnable);
+        thread.start();
+    }
+    public void reSendMessage(final String message){
+        Runnable runnable = new Runnable() {
+            @Override
+            public void run() {
+                if (out != null && !out.checkError()) {
+                    out.println(lastMessage);
+                    out.flush();
+                    Log.d("reSendM:",lastMessage);
                 }
 
             }
