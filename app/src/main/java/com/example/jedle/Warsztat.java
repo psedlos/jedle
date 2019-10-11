@@ -14,24 +14,15 @@ import java.util.Arrays;
 
 public class Warsztat extends BaseActivity {
     public Switch[] switches;
-    public Button refreshbutton;
-    //public ClientSend clientSend;
     public String recieverName;
-    public EditText ipaddr;
+    public String ipaddr;
     public TextView[] switchesNames;
-    //public Runnable clientListen;
     static public TcpClient mTcpClient;
     public Warsztat(){
-        //this.clientListen = BaseActivity.clientListen;
-        //this.clientSend = BaseActivity.clientSend;
     }
     int i;
-    int relayVal;
     int valueOfSwitches;
-    //public void WarsztatBaseActivity(){this.mTcpClient = ConnectTask.mTcpClient;}
     public void WarsztatMainActivity(){
-
-
         recieverName = "Warsztat";
         switchesNames[0].setText(R.string.textView1);
         switchesNames[1].setText(R.string.textView2);
@@ -74,15 +65,6 @@ public class Warsztat extends BaseActivity {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {if(buttonView.isPressed()){ doButtonClick(buttonView, isChecked, 7, recieverName);}}
         });
-        refreshbutton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mTcpClient != null) {
-                    mTcpClient.sendMessage(recieverName + " st");
-                }
-                //clientSend.sendText(recieverName + " st", ipaddr.getText().toString());
-            }
-        });
     }
 
     public void doButtonClick (CompoundButton buttonView, boolean isChecked, int buttonNumber, String recieverName) {
@@ -90,14 +72,6 @@ public class Warsztat extends BaseActivity {
         if (isChecked) txt = txt + " 1";
         else txt = txt + " 0";
         mTcpClient.sendMessage(txt);
-        //final Handler handler = new Handler();
-        //handler.postDelayed(new Runnable() {
-        //    @Override
-        //    public void run() {
-        //        Log.d("WAIT","if you read that I perhaps has waited for 100ms");
-        //    }
-        //},100);
-        //mTcpClient.sendMessage(recieverName + " st");
     }
     public void updateSwitches(final String[] commandBits){
         new Handler(Looper.getMainLooper()).post(new Runnable() {
@@ -108,6 +82,11 @@ public class Warsztat extends BaseActivity {
                     }
                 }
         });
+    }
+    public void refreshSwitches(){
+        if (mTcpClient != null) {
+            mTcpClient.sendMessage(recieverName + " st");
+        }
     }
     public void getMessage(String dataReceived){
         valueOfSwitches=0;

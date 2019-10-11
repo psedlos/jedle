@@ -79,6 +79,9 @@ public class BaseActivity extends AppCompatActivity {
             }
             return true;
         }
+        if (id == R.id.refresh){
+            warsztat.refreshSwitches();
+        }
 
         return super.onOptionsItemSelected(item);
     }

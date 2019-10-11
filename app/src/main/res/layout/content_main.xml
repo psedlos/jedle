@@ -8,215 +8,189 @@
     tools:context=".MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <Switch
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:id="@+id/switch1"
-        android:layout_width="65dp"
-        android:layout_height="12dp"
-        android:layout_margin="16dp"
-        app:layout_constraintLeft_creator="@android:integer/config_mediumAnimTime"
-        app:layout_constraintTop_creator="@android:integer/config_mediumAnimTime"/>
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="65dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="66dp"
+            android:layout_marginStart="16dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="308dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/switch1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/switch1"
-        app:layout_constraintTop_toTopOf="@+id/switch1" />
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="308dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/switch1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch1"
+            app:layout_constraintTop_toTopOf="@+id/switch1" />
 
-    <Switch
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/switch1"
-        android:id="@+id/switch2"
-        android:layout_width="65dp"
-        android:layout_height="12dp"
-        android:layout_margin="16dp" />
+        <Switch
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch1"
+            android:id="@+id/switch2"
+            android:layout_width="65dp"
+            android:layout_height="12dp"
+            android:layout_margin="16dp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="308dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/switch2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/switch2"
-        app:layout_constraintTop_toTopOf="@+id/switch2" />
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="308dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/switch2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch2"
+            app:layout_constraintTop_toTopOf="@+id/switch2" />
 
-    <Switch
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/switch2"
-        android:id="@+id/switch3"
-        android:layout_width="65dp"
-        android:layout_height="12dp"
-        android:layout_margin="16dp" />
+        <Switch
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch2"
+            android:id="@+id/switch3"
+            android:layout_width="65dp"
+            android:layout_height="12dp"
+            android:layout_margin="16dp" />
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="308dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/switch3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/switch3"
-        app:layout_constraintTop_toTopOf="@+id/switch3" />
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="308dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/switch3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch3"
+            app:layout_constraintTop_toTopOf="@+id/switch3" />
 
-    <Switch
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/switch3"
-        android:id="@+id/switch4"
-        android:layout_width="65dp"
-        android:layout_height="12dp"
-        android:layout_margin="16dp"/>
+        <Switch
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch3"
+            android:id="@+id/switch4"
+            android:layout_width="65dp"
+            android:layout_height="12dp"
+            android:layout_margin="16dp"/>
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="308dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/switch4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/switch4"
-        app:layout_constraintTop_toTopOf="@+id/switch4" />
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="308dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/switch4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch4"
+            app:layout_constraintTop_toTopOf="@+id/switch4" />
 
-    <Switch
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/switch4"
-        android:id="@+id/switch5"
-        android:layout_width="65dp"
-        android:layout_height="12dp"
-        android:layout_margin="16dp"/>
+        <Switch
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch4"
+            android:id="@+id/switch5"
+            android:layout_width="65dp"
+            android:layout_height="12dp"
+            android:layout_margin="16dp"/>
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="308dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/switch5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/switch5"
-        app:layout_constraintTop_toTopOf="@+id/switch5" />
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="308dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/switch5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch5"
+            app:layout_constraintTop_toTopOf="@+id/switch5" />
 
-    <Switch
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/switch5"
-        android:id="@+id/switch6"
-        android:layout_width="65dp"
-        android:layout_height="12dp"
-        android:layout_margin="16dp"/>
+        <Switch
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch5"
+            android:id="@+id/switch6"
+            android:layout_width="65dp"
+            android:layout_height="12dp"
+            android:layout_margin="16dp"/>
 
-    <TextView
-        android:id="@+id/textView6"
-        android:layout_width="308dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/switch6"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/switch6"
-        app:layout_constraintTop_toTopOf="@+id/switch6" />
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="308dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/switch6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch6"
+            app:layout_constraintTop_toTopOf="@+id/switch6" />
 
-    <Switch
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/switch6"
-        android:id="@+id/switch7"
-        android:layout_width="65dp"
-        android:layout_height="12dp"
-        android:layout_margin="16dp"/>
+        <Switch
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch6"
+            android:id="@+id/switch7"
+            android:layout_width="65dp"
+            android:layout_height="12dp"
+            android:layout_margin="16dp"/>
 
-    <TextView
-        android:id="@+id/textView7"
-        android:layout_width="308dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/switch7"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/switch7"
-        app:layout_constraintTop_toTopOf="@+id/switch7" />
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="308dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/switch7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch7"
+            app:layout_constraintTop_toTopOf="@+id/switch7" />
 
-    <Switch
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/switch7"
-        android:id="@+id/switch8"
-        android:layout_width="65dp"
-        android:layout_height="12dp"
-        android:layout_margin="16dp"/>
+        <Switch
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/switch7"
+            android:id="@+id/switch8"
+            android:layout_width="65dp"
+            android:layout_height="12dp"
+            android:layout_margin="16dp"/>
 
-    <TextView
-        android:id="@+id/textView8"
-        android:layout_width="308dp"
-        android:layout_height="21dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintBottom_toBottomOf="@+id/switch8"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/switch8"
-        app:layout_constraintTop_toTopOf="@+id/switch8" />
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="308dp"
+            android:layout_height="21dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/switch8"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/switch8"
+            app:layout_constraintTop_toTopOf="@+id/switch8" />
 
-    <EditText
+        <com.longdo.mjpegviewer.MjpegView
+            android:id="@+id/mjpegview"
+            android:layout_width="395dp"
+            android:layout_height="299dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/switch8" />
 
-        android:id="@+id/editText"
-        android:layout_width="244dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:ems="18"
-        android:inputType="numberSigned"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/switch8" />
 
-    <Button
-        android:id="@+id/refreshButton"
-        android:layout_width="91dp"
-        android:layout_height="47dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="24dp"
-        android:layout_marginRight="24dp"
-        android:text="Refresh"
-        app:layout_constraintBottom_toBottomOf="@+id/editText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/editText"
-        app:layout_constraintTop_toTopOf="@+id/editText" />
 
-    <VideoView
-        android:id="@+id/videoView"
-        android:layout_width="395dp"
-        android:layout_height="299dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
 
 </android.support.constraint.ConstraintLayout>
