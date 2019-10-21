@@ -1,9 +1,6 @@
 package com.example.jedle;
 
-import android.content.Intent;
-import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -13,7 +10,7 @@ public class BaseActivity extends AppCompatActivity {
     //static public ClientListen clientListen = new ClientListen();
     static public Thread UDPList;
     static public TcpClient mTcpClient;// = new TcpClient();
-    Warsztat warsztat;
+    RPInode RPInode;
     //@Override
     //protected void onCreate(Bundle savedInstanceState) {
     //    super.onCreate(savedInstanceState);
@@ -25,10 +22,10 @@ public class BaseActivity extends AppCompatActivity {
         getMenuInflater().inflate(R.menu.menu_main,menu);
         //UDPList = new Thread(clientListen);
         //UDPList.start();
-        this.warsztat = MainActivity.warsztat;
+        this.RPInode = MainActivity.RPInode;
 
 
-        //menu.getItem(0).setTitle(MainActivity.warsztat.recieverName);
+        //menu.getItem(0).setTitle(MainActivity.RPInode.recieverName);
         //menu.getItem(1).setTitle("dis_connect");
         //menu.getItem(2).setTitle("connect");
         return super.onCreateOptionsMenu(menu);
@@ -80,7 +77,7 @@ public class BaseActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.refresh){
-            warsztat.refreshSwitches();
+            RPInode.refreshSwitches();
         }
 
         return super.onOptionsItemSelected(item);

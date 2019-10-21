@@ -11,14 +11,14 @@ import java.net.InetSocketAddress;
 
 public class ClientListen implements Runnable {
     //MainContainer mc;
-    Warsztat warsztat;
+    RPInode RPInode;
     public ClientListen(){}//MainContainer mc){        this.mc = mc;    }
 
 
     @Override
     public void run() {
         Looper.prepare();
-        this.warsztat = MainActivity.warsztat;
+        this.RPInode = MainActivity.RPInode;
         boolean run = true;
         while (run) {
             try {
@@ -40,7 +40,7 @@ public class ClientListen implements Runnable {
                 }
                 String text = new String(intmessage, 0, packet.getLength());
                 Log.d("Received Data", text);
-                warsztat.getMessage(text);
+                RPInode.getMessage(text);
 
 
             } catch (IOException e) {
