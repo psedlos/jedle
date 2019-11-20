@@ -79,6 +79,14 @@ public class BaseActivity extends AppCompatActivity {
         if (id == R.id.refresh){
             RPInode.refreshSwitches();
         }
+        if (id == R.id.warsztat){
+            RPInode.recieverName = "Warsztat";
+            RPInode.refreshSwitches();
+        }
+        if (id == R.id.kury){
+            RPInode.recieverName = "Kury";
+            RPInode.refreshSwitches();
+        }
 
         return super.onOptionsItemSelected(item);
     }

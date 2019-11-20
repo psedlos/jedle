@@ -17,10 +17,20 @@
         android:orderInCategory="102"
         android:title="reconnect"
         app:showAsAction="never" />
-   <item
+    <item
         android:id="@+id/refresh"
         android:orderInCategory="103"
         android:title="Refresh"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/warsztat"
+        android:orderInCategory="104"
+        android:title="Warsztat"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/kury"
+        android:orderInCategory="105"
+        android:title="Kury"
         app:showAsAction="never" />
 
 </menu>
